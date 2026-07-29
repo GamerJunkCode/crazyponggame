@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://csblkrrjliq3i"]
+
+[ext_resource type="Script" uid="uid://btp1ahn5638s4" path="res://Main.cs" id="1_7mycd"]
+[ext_resource type="PackedScene" uid="uid://diiogxhnqlqo5" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://clsrylm2d0ep5" path="res://Player.cs" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c8wg73yj565uc" path="res://ball.tscn" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://dt6w27bsblgjx" path="res://Ball.cs" id="5_7mycd"]
+[ext_resource type="Script" uid="uid://bgnw1mdb0kowk" path="res://LeftGoal.cs" id="7_272bh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1yuh"]
+size = Vector2(1151, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rty3"]
+size = Vector2(99, 656)
+
+[node name="Main" type="Node2D" unique_id=1834201830]
+script = ExtResource("1_7mycd")
+
+[node name="UI" type="Node" parent="." unique_id=285060039]
+
+[node name="Background" type="ColorRect" parent="UI" unique_id=1510033503]
+offset_right = 1152.0
+offset_bottom = 651.0
+color = Color(0.11858138, 0.11858138, 0.11858138, 1)
+
+[node name="Timer" type="Label" parent="UI" unique_id=872797442]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.0
+offset_top = 3.0
+offset_right = 21.0
+offset_bottom = 26.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(21, 11)
+text = "00:00"
+
+[node name="Label" type="Label" parent="UI" unique_id=2012408407]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -19.0
+offset_top = 35.0
+offset_right = 21.0
+offset_bottom = 58.0
+grow_horizontal = 2
+scale = Vector2(1.56, 1.56)
+pivot_offset = Vector2(18, 12)
+text = "0 | 0"
+
+[node name="Player" parent="." unique_id=758396600 instance=ExtResource("1_ig7tw")]
+z_index = 2
+position = Vector2(50, 324)
+script = ExtResource("2_0xm2m")
+
+[node name="CPU" parent="." unique_id=1303595184 instance=ExtResource("1_ig7tw")]
+z_index = 2
+position = Vector2(1082, 324)
+script = ExtResource("2_0xm2m")
+
+[node name="Ball" parent="." unique_id=845725662 instance=ExtResource("4_lquwl")]
+z_index = 2
+position = Vector2(576, 324)
+script = ExtResource("5_7mycd")
+
+[node name="Map" type="Node" parent="." unique_id=1782623610]
+
+[node name="Walls" type="StaticBody2D" parent="Map" unique_id=1745476789]
+
+[node name="Top" type="CollisionShape2D" parent="Map/Walls" unique_id=1981062980]
+position = Vector2(576, -32)
+shape = SubResource("RectangleShape2D_u1yuh")
+
+[node name="Bottom" type="CollisionShape2D" parent="Map/Walls" unique_id=2106911213]
+position = Vector2(575.5, 680)
+shape = SubResource("RectangleShape2D_u1yuh")
+
+[node name="LeftGoal" type="Area2D" parent="Map" unique_id=51393603]
+script = ExtResource("7_272bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/LeftGoal" unique_id=1994977157]
+position = Vector2(-50, 328)
+shape = SubResource("RectangleShape2D_7rty3")
+
+[node name="RightGoal" type="Area2D" parent="Map" unique_id=1905125453]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/RightGoal" unique_id=937463801]
+position = Vector2(1200, 328)
+shape = SubResource("RectangleShape2D_7rty3")
+
+[connection signal="body_entered" from="Map/LeftGoal" to="Ball" method="_on_left_goal_body_entered"]

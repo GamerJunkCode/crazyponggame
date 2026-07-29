@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c8wg73yj565uc"]
+
+[ext_resource type="Texture2D" uid="uid://bwttklyyx6go7" path="res://googly-d.png" id="1_x8fbi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u1yuh"]
+radius = 31.780497
+
+[node name="Ball" type="CharacterBody2D" unique_id=339882644]
+scale = Vector2(0.7410446, 0.7410446)
+
+[node name="GooglyD" type="Sprite2D" parent="." unique_id=638844763]
+scale = Vector2(0.24461539, 0.25151515)
+texture = ExtResource("1_x8fbi")
+offset = Vector2(0, 19.879519)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=960238787]
+shape = SubResource("CircleShape2D_u1yuh")
