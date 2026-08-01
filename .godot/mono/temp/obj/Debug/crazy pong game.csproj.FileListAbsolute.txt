@@ -15,3 +15,4 @@ C:\Users\MineS\Documents\crazy_pong_game\.godot\mono\temp\obj\Debug\refint\crazy
 C:\Users\MineS\Documents\crazy_pong_game\.godot\mono\temp\obj\Debug\crazy pong game.pdb
 C:\Users\MineS\Documents\crazy_pong_game\.godot\mono\temp\obj\Debug\crazy pong game.genruntimeconfig.cache
 C:\Users\MineS\Documents\crazy_pong_game\.godot\mono\temp\obj\Debug\ref\crazy pong game.dll
+C:\Users\MineS\Documents\crazy_pong_game\.godot\mono\temp\obj\Debug\crazy pong game.sourcelink.json

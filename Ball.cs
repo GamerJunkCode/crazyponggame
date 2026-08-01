@@ -25,8 +25,10 @@ public partial class Ball : CharacterBody2D
         StartPos = Position;
     }
 
-
-    public static void ResetBall()
+    /// <summary>
+    /// On call it will return the ball to his original point.
+    /// </summary>
+    public void ResetBall()
     {
         Position = StartPos;
     }

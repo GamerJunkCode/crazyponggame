@@ -3,12 +3,22 @@
 [ext_resource type="Script" uid="uid://btp1ahn5638s4" path="res://Main.cs" id="1_7mycd"]
 [ext_resource type="PackedScene" uid="uid://diiogxhnqlqo5" path="res://player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://clsrylm2d0ep5" path="res://Player.cs" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://glc6sdrpavre" path="res://CPU.cs" id="4_272bh"]
 [ext_resource type="PackedScene" uid="uid://c8wg73yj565uc" path="res://ball.tscn" id="4_lquwl"]
-[ext_resource type="Script" uid="uid://dt6w27bsblgjx" path="res://Ball.cs" id="5_7mycd"]
-[ext_resource type="Script" uid="uid://bgnw1mdb0kowk" path="res://LeftGoal.cs" id="7_272bh"]
+[ext_resource type="Script" uid="uid://v3vplbwaumrk" path="res://Ball.cs" id="5_7mycd"]
+[ext_resource type="Script" uid="uid://c8j12lwwvp6ww" path="res://RightGoal.cs" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1yuh"]
 size = Vector2(1151, 64)
+
+[sub_resource type="CSharpScript" id="CSharpScript_lquwl"]
+script/source = "using Godot;
+using System;
+
+public partial class LeftGoal : Area2D
+{
+}
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7rty3"]
 size = Vector2(99, 656)
@@ -54,12 +64,14 @@ z_index = 2
 position = Vector2(50, 324)
 script = ExtResource("2_0xm2m")
 
-[node name="CPU" parent="." unique_id=1303595184 instance=ExtResource("1_ig7tw")]
+[node name="CPU" parent="." unique_id=1303595184 node_paths=PackedStringArray("_ball") instance=ExtResource("1_ig7tw")]
 z_index = 2
 position = Vector2(1082, 324)
-script = ExtResource("2_0xm2m")
+script = ExtResource("4_272bh")
+_ball = NodePath("../Ball")
 
 [node name="Ball" parent="." unique_id=845725662 instance=ExtResource("4_lquwl")]
+unique_name_in_owner = true
 z_index = 2
 position = Vector2(576, 324)
 script = ExtResource("5_7mycd")
@@ -77,16 +89,18 @@ position = Vector2(575.5, 680)
 shape = SubResource("RectangleShape2D_u1yuh")
 
 [node name="LeftGoal" type="Area2D" parent="Map" unique_id=51393603]
-script = ExtResource("7_272bh")
+script = SubResource("CSharpScript_lquwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/LeftGoal" unique_id=1994977157]
 position = Vector2(-50, 328)
 shape = SubResource("RectangleShape2D_7rty3")
 
 [node name="RightGoal" type="Area2D" parent="Map" unique_id=1905125453]
+script = ExtResource("6_7mycd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/RightGoal" unique_id=937463801]
 position = Vector2(1200, 328)
 shape = SubResource("RectangleShape2D_7rty3")
 
 [connection signal="body_entered" from="Map/LeftGoal" to="Ball" method="_on_left_goal_body_entered"]
+[connection signal="body_entered" from="Map/RightGoal" to="Ball" method="_on_right_goal_body_entered"]

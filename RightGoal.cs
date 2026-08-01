@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class LeftGoal : Area2D
+public partial class RightGoal : Area2D
 {
     public override void _Ready()
     {
@@ -14,10 +14,10 @@ public partial class LeftGoal : Area2D
         // defensive check. Body should always be type Ball, but ...
         if (body is Ball ball)
         {
-            Main.LeftPlayerScore += 1;
+            Main.RightPlayerScore += 1;
             ball.ResetBall();
         }
 
-        GD.Print(Main.LeftPlayerScore);
+        GD.Print(Main.RightPlayerScore);
     }
 }
