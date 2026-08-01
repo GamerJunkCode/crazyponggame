@@ -1,9 +1,11 @@
+using System;
 using Godot;
 
 public partial class Ball : CharacterBody2D
 {
     public Vector2 Direction = new Vector2(-1, 0.5f).Normalized();
     public int Speed { get; set; } = 400;
+    public Vector2 StartPos {get; private set;}
 
     public override void _PhysicsProcess(double delta)
     {
@@ -18,8 +20,14 @@ public partial class Ball : CharacterBody2D
         }
     }
 
-    public void ResetBall()
+    public override void _Ready()
     {
-        
+        StartPos = Position;
+    }
+
+
+    public static void ResetBall()
+    {
+        Position = StartPos;
     }
 }
