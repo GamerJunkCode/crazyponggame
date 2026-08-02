@@ -88,23 +88,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MineS\\.nuget\\packages\\": {},
+    "C:\\Users\\kevin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MineS\\Documents\\crazy_pong_game\\crazy pong game.csproj",
+      "projectUniqueName": "C:\\Users\\kevin\\source\\repos\\crazyponggame\\crazy pong game.csproj",
       "projectName": "crazy pong game",
-      "projectPath": "C:\\Users\\MineS\\Documents\\crazy_pong_game\\crazy pong game.csproj",
-      "packagesPath": "C:\\Users\\MineS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MineS\\Documents\\crazy_pong_game\\.godot\\mono\\temp\\obj\\",
+      "projectPath": "C:\\Users\\kevin\\source\\repos\\crazyponggame\\crazy pong game.csproj",
+      "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kevin\\source\\repos\\crazyponggame\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\MineS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

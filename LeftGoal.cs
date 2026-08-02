@@ -15,7 +15,7 @@ public partial class LeftGoal : Area2D
         if (body is Ball ball)
         {
             Main.LeftPlayerScore += 1;
-            ball.ResetBall();
+            ball.Reset();
         }
 
         GD.Print(Main.LeftPlayerScore);

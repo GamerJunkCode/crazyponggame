@@ -1,9 +1,10 @@
+using crazyponggame;
 using Godot;
 
 public partial class Player : CharacterBody2D
 {
-    [Export]
-    public int Speed { get; set; } = 400;
+    [Export] // Why [Export] if its defined here?
+    public int Speed { get; set; } = GameConstants.InitialSpeed;
 
     /// <summary>
     /// Turn Input to Velocity times Speed.
