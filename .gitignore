@@ -1,0 +1,18 @@
+Für ein C#/.NET-Projekt kannst du z. B. den Standardinhalt nehmen:
+
+# Build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# User-specific files
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# Logs
+*.log

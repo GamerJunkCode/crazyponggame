@@ -11,11 +11,10 @@ public partial class RightGoal : Area2D
 
     private void OnBodyEntered(Node2D body)
     {
-        // defensive check. Body should always be type Ball, but ...
         if (body is Ball ball)
         {
             Main.RightPlayerScore += 1;
-            ball.ResetBall();
+            ball.Reset();
         }
 
         GD.Print(Main.RightPlayerScore);

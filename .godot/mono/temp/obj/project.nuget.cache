@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4/omKBb9ev0=",
+  "dgSpecHash": "Doe/UB7QBjo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MineS\\Documents\\crazy_pong_game\\crazy pong game.csproj",
+  "projectFilePath": "C:\\Users\\kevin\\source\\repos\\crazyponggame\\crazy pong game.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\MineS\\.nuget\\packages\\godot.sourcegenerators\\4.7.1\\godot.sourcegenerators.4.7.1.nupkg.sha512",
-    "C:\\Users\\MineS\\.nuget\\packages\\godotsharp\\4.7.1\\godotsharp.4.7.1.nupkg.sha512",
-    "C:\\Users\\MineS\\.nuget\\packages\\godotsharpeditor\\4.7.1\\godotsharpeditor.4.7.1.nupkg.sha512"
+    "C:\\Users\\kevin\\.nuget\\packages\\godot.sourcegenerators\\4.7.1\\godot.sourcegenerators.4.7.1.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\godotsharp\\4.7.1\\godotsharp.4.7.1.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\godotsharpeditor\\4.7.1\\godotsharpeditor.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }
